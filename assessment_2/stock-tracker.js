@@ -1,16 +1,16 @@
 let previousSearchedTerm = ""; // to store last searched tearm by user
 let searchedSymbol = ""; // to store current searched tearm by user
 let selectedSymbolDetail = {}; // seleted symbol detail from data list\
+const options = {
+  method: "GET",
+  headers: {
+    "X-RapidAPI-Key": "", // please put secret key provided in mail.
+    "X-RapidAPI-Host": "alpha-vantage.p.rapidapi.com",
+  },
+};
 // function to get intraday data of a stock from remote API
 function getIntraDayData(stockSymbol) {
   showSelectedBtn("intraDayBtn");
-  const options = {
-    method: "GET",
-    headers: {
-      "X-RapidAPI-Key": "2e5bacd5e3msh520bb3b518ee900p1bd586jsn971c3765a692",
-      "X-RapidAPI-Host": "alpha-vantage.p.rapidapi.com",
-    },
-  };
   fetch(
     `https://alpha-vantage.p.rapidapi.com/query?interval=5min&function=TIME_SERIES_INTRADAY&symbol=${stockSymbol}&datatype=json&output_size=compact`,
     options
@@ -31,13 +31,6 @@ function getIntraDayData(stockSymbol) {
 // function to get daily data of a stock from remote API
 function getDailyData(stockSymbol) {
   showSelectedBtn("dailyBtn");
-  const options = {
-    method: "GET",
-    headers: {
-      "X-RapidAPI-Key": "2e5bacd5e3msh520bb3b518ee900p1bd586jsn971c3765a692",
-      "X-RapidAPI-Host": "alpha-vantage.p.rapidapi.com",
-    },
-  };
   fetch(
     `https://alpha-vantage.p.rapidapi.com/query?function=TIME_SERIES_DAILY&symbol=${stockSymbol}&outputsize=compact&datatype=json`,
     options
