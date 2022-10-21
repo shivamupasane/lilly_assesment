@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <link rel="stylesheet" href="./site.css">
+</head>
+  <body>
+    <div class ='imgInput'>
+        Upload Image : <input type="file"  id="image-input" onchange="onFileSelected(event)" accept="image/*" value="chose image">
+      </div>
+    <div id="imgParent">
+        <img id="display-image">      
+    </div>
+    <div id="imgDetails" style="display: none;">
+        <div>Image name : <span id="imageName"></span></div>
+        <div>Dimensions : <span id="imageDimension"></span></div>
+        <div>MIME Type : <span id="imageMime"></span></div>
+    </div>
+    <div id="descriptionTableContainer">
+    </div>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="./image-mapper.js"></script>
+  </body>
+</html>

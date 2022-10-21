@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./site.css">    
+  </head>
+  <body>
+    <label for="symbol-input">enter symbol name to see prices:</label>
+    <input type="text" list="symbol-list" name="symbol-list" id="symbol-input" oninput="searchSymbol(event)" placeholder="" value="">
+<datalist id="symbol-list">
+ 
+</datalist>
+   
+    <div class="timePeriodBtns">
+      <button type="button"  id="intraDayBtn" onclick="getIntraDayData(searchedSymbol)">IntraDay</button>
+      <button type="button" id="dailyBtn" onclick="getDailyData(searchedSymbol)">Daily</button>
+    </div>
+    <h4 id="instrumentDetail"></h4>
+    <div id="containerDiv">
+    </div>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.min.js" integrity="sha512-a+/SD0dbGeXTN4AA5F1dDZqsPvXKKyS1bvU2z5ElpKNJ4xQlOMUs/1+suA+j+kj5nAAya+VmT5HUKZmazluxVQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./stock-tracker.js"></script>
+    <script>
+    </script>
+  </body>
+</html>

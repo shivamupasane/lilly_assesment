@@ -1,0 +1,100 @@
+
+.imgInput {
+ height: 25px;
+ margin-bottom: 5px;
+} 
+#imgParent {
+position: relative;
+display: inline-block;
+margin-bottom: 15px;
+}
+#imgParent img {
+display: block;
+}
+#imgParent svg {
+ position: absolute;
+ top:0;
+}
+#imgDetails {
+ background-color: #efefef;
+ border: 1px solid #000000;
+ width: fit-content;
+ margin-bottom: 15px;
+}
+#imgDetails div {
+ margin: 5px;
+}
+.card {
+border : 1px solid #eee;
+box-shadow : 0 2px 2px #ccc;
+width : 200px;
+height : 100px;
+margin : 10px;
+padding : 10px;
+position: absolute;
+background-color: #ffffff;
+}
+.cardHover {
+border : 1px solid #eee;
+box-shadow : 0 2px 2px #ccc;
+width : fit-content;
+height : 20px;
+margin : 10px;
+padding : 10px;
+position: absolute;
+background-color: #efefef;
+}
+.tooltip  div {
+margin-bottom: 10px;
+}
+.saveBtn {
+background-color:#008000;
+border: 1px solid #008000;
+}
+.cancelBtn {
+background-color:#e43d30;
+border: 1px solid #e43d30;
+margin-left: 15px;
+}
+.tooltip button {
+width: 65px;
+padding: 7px;
+color: white;
+border-radius: 5px;
+}
+#descriptionTableContainer table {
+width: 100%;
+margin-bottom: 1rem;
+background-color: transparent;
+border-collapse: collapse;
+
+
+}
+#descriptionTableContainer table th {
+ vertical-align: bottom;
+border-bottom: 2px solid #dee2e6;
+}
+#descriptionTableContainer table td {
+ padding: 0.75rem;
+vertical-align: top;
+border-top: 1px solid #dee2e6;
+text-align: center;
+}
+.noRecordTd {
+ border-bottom: 1px solid #dee2e6;
+}
+#descriptionTableContainer {
+ max-height: 300px;
+ overflow-y: auto;
+}
+#descriptionTableContainer table tr:nth-child(1) {
+ position: sticky;
+ top: 0;
+ background-color: #ffffff;
+}
+tr:hover {background-color: #dbd3d3 !important;}
+tr:nth-child(even) {background-color: #efefef;}
+tr td:last-child span {cursor: pointer;}
+.border-warning-color {
+ border: 1px solid #e43d30;
+}

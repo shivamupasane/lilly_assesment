@@ -1,0 +1,25 @@
+button {
+    width: 65px;
+    padding: 7px;
+    color: white;
+    border-radius: 5px;
+    background-color:#e43d30;
+    border: 1px solid #e43d30;
+}
+button.selected {
+  background-color:#008000;
+    border: 1px solid #008000;
+}
+.card {
+    border : 1px solid #eee;
+ box-shadow : 0 2px 2px #ccc;
+  width : 201px;
+  height : 110px;
+  margin : 10px;
+  padding : 10px;
+  position: absolute;
+    background-color: #ffffff;
+}
+.timePeriodBtns {
+  margin-bottom: 50px;
+}
