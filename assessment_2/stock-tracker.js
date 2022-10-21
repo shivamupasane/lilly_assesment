@@ -22,11 +22,7 @@ function getIntraDayData(stockSymbol) {
           ? response["Time Series (5min)"]
           : []
         : [];
-      if (dataForChart && dataForChart.length > 0) {
-        drawChart(dataForChart, "intraDay");
-      } else {
-        handleError("Invalid API call. Please retry with some other symbol");
-      }
+      drawChart(dataForChart, "intraDay");
     })
     .catch((err) => {
       handleError(err);
@@ -35,6 +31,13 @@ function getIntraDayData(stockSymbol) {
 // function to get daily data of a stock from remote API
 function getDailyData(stockSymbol) {
   showSelectedBtn("dailyBtn");
+  const options = {
+    method: "GET",
+    headers: {
+      "X-RapidAPI-Key": "2e5bacd5e3msh520bb3b518ee900p1bd586jsn971c3765a692",
+      "X-RapidAPI-Host": "alpha-vantage.p.rapidapi.com",
+    },
+  };
   fetch(
     `https://alpha-vantage.p.rapidapi.com/query?function=TIME_SERIES_DAILY&symbol=${stockSymbol}&outputsize=compact&datatype=json`,
     options
@@ -46,11 +49,7 @@ function getDailyData(stockSymbol) {
           ? response["Time Series (Daily)"]
           : []
         : [];
-      if (dataForChart && dataForChart.length > 0) {
-        drawChart(dataForChart, "intraDay");
-      } else {
-        handleError("Invalid API call. Please retry with some other symbol");
-      }
+      drawChart(dataForChart, "daily");
     })
     .catch((err) => {
       handleError(err);
